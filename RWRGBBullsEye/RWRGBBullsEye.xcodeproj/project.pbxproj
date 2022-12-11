@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54103925294610A50007D7B0 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54103924294610A50007D7B0 /* ViewExtensions.swift */; };
+		54103927294611840007D7B0 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54103926294611840007D7B0 /* ColorExtension.swift */; };
+		54103929294614AF0007D7B0 /* ColorCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54103928294614AF0007D7B0 /* ColorCircle.swift */; };
 		54B8A7D32945C567000986F6 /* RWRGBBullsEyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B8A7D22945C567000986F6 /* RWRGBBullsEyeApp.swift */; };
 		54B8A7D52945C567000986F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B8A7D42945C567000986F6 /* ContentView.swift */; };
 		54B8A7D72945C568000986F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B8A7D62945C568000986F6 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54103924294610A50007D7B0 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		54103926294611840007D7B0 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		54103928294614AF0007D7B0 /* ColorCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircle.swift; sourceTree = "<group>"; };
 		54B8A7CF2945C567000986F6 /* RWRGBBullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RWRGBBullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B8A7D22945C567000986F6 /* RWRGBBullsEyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWRGBBullsEyeApp.swift; sourceTree = "<group>"; };
 		54B8A7D42945C567000986F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,8 +102,11 @@
 			children = (
 				54B8A7D22945C567000986F6 /* RWRGBBullsEyeApp.swift */,
 				54B8A7D42945C567000986F6 /* ContentView.swift */,
+				54103924294610A50007D7B0 /* ViewExtensions.swift */,
+				54103926294611840007D7B0 /* ColorExtension.swift */,
 				54B8A7D62945C568000986F6 /* Assets.xcassets */,
 				54B8A7D82945C568000986F6 /* Preview Content */,
+				54103928294614AF0007D7B0 /* ColorCircle.swift */,
 			);
 			path = RWRGBBullsEye;
 			sourceTree = "<group>";
@@ -258,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				54B8A7D52945C567000986F6 /* ContentView.swift in Sources */,
+				54103925294610A50007D7B0 /* ViewExtensions.swift in Sources */,
+				54103929294614AF0007D7B0 /* ColorCircle.swift in Sources */,
 				54B8A7D32945C567000986F6 /* RWRGBBullsEyeApp.swift in Sources */,
+				54103927294611840007D7B0 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

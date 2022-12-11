@@ -14,11 +14,9 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Circle()
-                .fill(Color(rgb: game.target))
+            ColorCircle(color: game.target)
             Text("R: ???, G: ???, B: ???")
-            Circle()
-                .fill(Color(rgb: guess))
+            ColorCircle(color: guess)
             Text(guess.text)
             SliderLabel(value: $guess.r, trackColor: .red)
             SliderLabel(value: $guess.g, trackColor: .green)
@@ -88,8 +86,3 @@ struct SliderLabel: View {
     }
 }
 
-extension Color {
-    init(rgb: RGB) {
-        self.init(red: rgb.r, green: rgb.g, blue: rgb.b)
-    }
-}
