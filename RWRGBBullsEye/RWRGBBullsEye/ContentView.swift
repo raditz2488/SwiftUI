@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    var game = Game(target: .random())
+    @State var game = Game(target: .random())
+    @State var guess: RGB = RGB(r: 0.5, g: 0.5, b: 0.5)
     
     var body: some View {
         VStack {
             ColorRGBView(rgb: game.target)
             Text("R: ???, G: ???, B: ???")
-            ColorRGBView(rgb: RGB(r: 0.0, g: 255.0, b: 255.0))
-            Text(RGB(r: 0.0, g: 255.0, b: 255.0).text)
+            ColorRGBView(rgb: guess)
+            Text(guess.text)
+            Slider(value: $guess.r)
+                .accentColor(.red)
+            Slider(value: $guess.g)
+                .accentColor(.green)
+            Slider(value: $guess.b)
+                .accentColor(.blue)
         }
     }
 }
@@ -31,23 +38,23 @@ struct ColorRGBView: View {
     let rgb: RGB
     
     var body: some View {
-        Color(red: rgb.r / 255.0, green: rgb.g / 255.0, blue: rgb.b / 255.0)
+        Color(red: rgb.r, green: rgb.g, blue: rgb.b)
     }
 }
 
 struct RGB {
-    let r, g, b: Double
+    var r, g, b: Double
     
     var text: String {
-        "R: \(String(format: "%.2f", r)), G: \(String(format: "%.2f", g)), B: \(String(format: "%.2f", b))"
+        "R: \(String(format: "%.2f", r * 255.0)), G: \(String(format: "%.2f", g * 255.0)), B: \(String(format: "%.2f", b * 255.0))"
     }
 }
 
 extension RGB {
     static func random() -> RGB {
-        let r = floor(Double.random(in: 0.0...255.0))
-        let g = floor(Double.random(in: 0.0...255.0))
-        let b = floor(Double.random(in: 0.0...255.0))
+        let r = Double.random(in: 0...1)
+        let g = Double.random(in: 0...1)
+        let b = Double.random(in: 0...1)
         return RGB(r: r, g: g, b: b)
     }
 }
