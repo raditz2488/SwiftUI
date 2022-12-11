@@ -17,12 +17,9 @@ struct ContentView: View {
             Text("R: ???, G: ???, B: ???")
             ColorRGBView(rgb: guess)
             Text(guess.text)
-            Slider(value: $guess.r)
-                .accentColor(.red)
-            Slider(value: $guess.g)
-                .accentColor(.green)
-            Slider(value: $guess.b)
-                .accentColor(.blue)
+            SliderLabel(value: $guess.r, trackColor: .red)
+            SliderLabel(value: $guess.g, trackColor: .green)
+            SliderLabel(value: $guess.b, trackColor: .blue)
         }
     }
 }
@@ -61,4 +58,18 @@ extension RGB {
 
 struct Game {
     var target: RGB
+}
+
+struct SliderLabel: View {
+    @Binding var value: Double
+    var trackColor: Color
+    
+    var body: some View {
+        HStack {
+            Text("0")
+            Slider(value: $value)
+                .accentColor(trackColor)
+            Text("255")
+        }.padding(.horizontal)
+    }
 }
