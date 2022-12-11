@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var game = Game(target: .random())
     @State var guess: RGB = RGB(r: 0.5, g: 0.5, b: 0.5)
+    @State var displayAlert = false
     
     var body: some View {
         VStack {
@@ -20,6 +21,17 @@ struct ContentView: View {
             SliderLabel(value: $guess.r, trackColor: .red)
             SliderLabel(value: $guess.g, trackColor: .green)
             SliderLabel(value: $guess.b, trackColor: .blue)
+            
+            Button("Hit me!") {
+                displayAlert = true
+            }
+        }.alert(isPresented: $displayAlert) {
+            Alert(title: Text("You scored!!!"),
+                  message: Text("???"),
+                  dismissButton: .default(Text("Ok"),
+                                          action: {
+                displayAlert = false
+            }))
         }
     }
 }
