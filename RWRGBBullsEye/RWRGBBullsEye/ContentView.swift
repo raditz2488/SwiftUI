@@ -17,9 +17,9 @@ struct ContentView: View {
             Color.element
             VStack {
                 ColorCircle(color: game.target)
-                Text("R: ???, G: ???, B: ???")
+                BelevelText(width: 300, height: 48, text: "R: ???, G: ???, B: ???")
                 ColorCircle(color: guess)
-                Text(guess.text)
+                BelevelText(width: 300, height: 48, text: guess.text)
                 SliderLabel(value: $guess.r, trackColor: .red)
                 SliderLabel(value: $guess.g, trackColor: .green)
                 SliderLabel(value: $guess.b, trackColor: .blue)
@@ -90,3 +90,24 @@ struct SliderLabel: View {
     }
 }
 
+
+struct BelevelText: View {
+    let width: CGFloat
+    let height: CGFloat
+    let text: String
+    
+    var body: some View {
+        Text(text)
+            .frame(width: width, height: height)
+            .background(
+                ZStack {
+                    Capsule()
+                        .fill(Color.element)
+                        .northWestShadow(radius: 3, offset: 1)
+                    Capsule()
+                        .inset(by: 3)
+                        .fill(Color.element).southEastShadow(radius: 1, offset: 1)
+                }
+            )
+    }
+}
