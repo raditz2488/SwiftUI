@@ -17,9 +17,9 @@ struct ContentView: View {
             Color.element
             VStack {
                 ColorCircle(color: game.target)
-                BelevelText(width: 300, height: 48, text: "R: ???, G: ???, B: ???")
+                BevelText(width: 300, height: 48, text: "R: ???, G: ???, B: ???")
                 ColorCircle(color: guess)
-                BelevelText(width: 300, height: 48, text: guess.text)
+                BevelText(width: 300, height: 48, text: guess.text)
                 SliderLabel(value: $guess.r, trackColor: .red)
                 SliderLabel(value: $guess.g, trackColor: .green)
                 SliderLabel(value: $guess.b, trackColor: .blue)
@@ -91,7 +91,7 @@ struct SliderLabel: View {
 }
 
 
-struct BelevelText: View {
+struct BevelText: View {
     let width: CGFloat
     let height: CGFloat
     let text: String
