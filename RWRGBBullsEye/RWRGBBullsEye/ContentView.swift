@@ -27,11 +27,7 @@ struct ContentView: View {
                 Button("Hit me!") {
                     displayAlert = true
                 }
-                .frame(width: 300, height: 48)
-                .background(
-                    Capsule()
-                        .fill(Color.element).northWestShadow()
-                )
+                .buttonStyle(NeuButtonStyle(width: 300, height: 48))
             }.alert(isPresented: $displayAlert) {
                 Alert(title: Text("You scored!!!"),
                       message: Text("???"),
