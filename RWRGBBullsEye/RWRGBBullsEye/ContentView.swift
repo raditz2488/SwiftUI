@@ -13,26 +13,34 @@ struct ContentView: View {
     @State var displayAlert = false
     
     var body: some View {
-        VStack {
-            ColorCircle(color: game.target)
-            Text("R: ???, G: ???, B: ???")
-            ColorCircle(color: guess)
-            Text(guess.text)
-            SliderLabel(value: $guess.r, trackColor: .red)
-            SliderLabel(value: $guess.g, trackColor: .green)
-            SliderLabel(value: $guess.b, trackColor: .blue)
-            
-            Button("Hit me!") {
-                displayAlert = true
+        ZStack {
+            Color.element
+            VStack {
+                ColorCircle(color: game.target)
+                Text("R: ???, G: ???, B: ???")
+                ColorCircle(color: guess)
+                Text(guess.text)
+                SliderLabel(value: $guess.r, trackColor: .red)
+                SliderLabel(value: $guess.g, trackColor: .green)
+                SliderLabel(value: $guess.b, trackColor: .blue)
+                
+                Button("Hit me!") {
+                    displayAlert = true
+                }
+                .frame(width: 300, height: 48)
+                .background(
+                    Capsule()
+                        .fill(Color.element).northWestShadow()
+                )
+            }.alert(isPresented: $displayAlert) {
+                Alert(title: Text("You scored!!!"),
+                      message: Text("???"),
+                      dismissButton: .default(Text("Ok"),
+                                              action: {
+                    displayAlert = false
+                }))
             }
-        }.alert(isPresented: $displayAlert) {
-            Alert(title: Text("You scored!!!"),
-                  message: Text("???"),
-                  dismissButton: .default(Text("Ok"),
-                                          action: {
-                displayAlert = false
-            }))
-        }
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 

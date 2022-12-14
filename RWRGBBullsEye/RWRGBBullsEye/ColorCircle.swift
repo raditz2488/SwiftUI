@@ -12,7 +12,6 @@ struct ColorCircle: View {
     
     var body: some View {
         ZStack {
-            Color.element
             Circle()
                 .fill(Color.element)
                 .northWestShadow()
