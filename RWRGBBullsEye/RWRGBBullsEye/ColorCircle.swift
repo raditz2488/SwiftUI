@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ColorCircle: View {
-    var color: RGB
+    let color: RGB
+    let size: CGFloat
     
     var body: some View {
         ZStack {
@@ -19,5 +20,6 @@ struct ColorCircle: View {
                 .fill(Color(rgb: color))
                 .padding(20)
         }
+        .frame(width: size, height: size)
     }
 }

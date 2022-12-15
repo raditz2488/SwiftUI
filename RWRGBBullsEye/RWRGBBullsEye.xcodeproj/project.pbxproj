@@ -11,6 +11,9 @@
 		54103927294611840007D7B0 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54103926294611840007D7B0 /* ColorExtension.swift */; };
 		54103929294614AF0007D7B0 /* ColorCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54103928294614AF0007D7B0 /* ColorCircle.swift */; };
 		541EFD74294A4264005B3F2D /* NeuButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541EFD73294A4264005B3F2D /* NeuButtonStyle.swift */; };
+		54B1BA9E294B1916007A8829 /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B1BA9D294B1916007A8829 /* RGB.swift */; };
+		54B1BAA0294B199D007A8829 /* SliderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B1BA9F294B199D007A8829 /* SliderLabel.swift */; };
+		54B1BAA2294B19CC007A8829 /* BevelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B1BAA1294B19CC007A8829 /* BevelText.swift */; };
 		54B8A7D32945C567000986F6 /* RWRGBBullsEyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B8A7D22945C567000986F6 /* RWRGBBullsEyeApp.swift */; };
 		54B8A7D52945C567000986F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B8A7D42945C567000986F6 /* ContentView.swift */; };
 		54B8A7D72945C568000986F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B8A7D62945C568000986F6 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		54103926294611840007D7B0 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		54103928294614AF0007D7B0 /* ColorCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircle.swift; sourceTree = "<group>"; };
 		541EFD73294A4264005B3F2D /* NeuButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuButtonStyle.swift; sourceTree = "<group>"; };
+		54B1BA9D294B1916007A8829 /* RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
+		54B1BA9F294B199D007A8829 /* SliderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderLabel.swift; sourceTree = "<group>"; };
+		54B1BAA1294B19CC007A8829 /* BevelText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BevelText.swift; sourceTree = "<group>"; };
 		54B8A7CF2945C567000986F6 /* RWRGBBullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RWRGBBullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B8A7D22945C567000986F6 /* RWRGBBullsEyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWRGBBullsEyeApp.swift; sourceTree = "<group>"; };
 		54B8A7D42945C567000986F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,12 +110,15 @@
 			children = (
 				54B8A7D22945C567000986F6 /* RWRGBBullsEyeApp.swift */,
 				54B8A7D42945C567000986F6 /* ContentView.swift */,
+				54B1BA9D294B1916007A8829 /* RGB.swift */,
 				54103924294610A50007D7B0 /* ViewExtensions.swift */,
 				54103926294611840007D7B0 /* ColorExtension.swift */,
 				54B8A7D62945C568000986F6 /* Assets.xcassets */,
 				54B8A7D82945C568000986F6 /* Preview Content */,
 				54103928294614AF0007D7B0 /* ColorCircle.swift */,
 				541EFD73294A4264005B3F2D /* NeuButtonStyle.swift */,
+				54B1BA9F294B199D007A8829 /* SliderLabel.swift */,
+				54B1BAA1294B19CC007A8829 /* BevelText.swift */,
 			);
 			path = RWRGBBullsEye;
 			sourceTree = "<group>";
@@ -271,10 +280,13 @@
 			files = (
 				54B8A7D52945C567000986F6 /* ContentView.swift in Sources */,
 				54103925294610A50007D7B0 /* ViewExtensions.swift in Sources */,
+				54B1BAA2294B19CC007A8829 /* BevelText.swift in Sources */,
 				541EFD74294A4264005B3F2D /* NeuButtonStyle.swift in Sources */,
 				54103929294614AF0007D7B0 /* ColorCircle.swift in Sources */,
+				54B1BA9E294B1916007A8829 /* RGB.swift in Sources */,
 				54B8A7D32945C567000986F6 /* RWRGBBullsEyeApp.swift in Sources */,
 				54103927294611840007D7B0 /* ColorExtension.swift in Sources */,
+				54B1BAA0294B199D007A8829 /* SliderLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
